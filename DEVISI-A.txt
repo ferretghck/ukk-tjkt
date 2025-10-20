@@ -1,0 +1,36 @@
+/system identity set name=DEVISI_A_MOCHAMAD DINO ADJI SAPUTRA
+
+/interface
+set [find name=ether1] name=ether1-internet
+set [find name=ether2] name=ether2-Trunk
+set [find name=ether3] name=ether3-Devisi-B
+
+/ip dns set servers=8.8.8.8 allow-remote-requests=yes
+
+/ip firewall nat add chain=srcnat out-interface=ether1-internet action=masquerade
+
+/ip dhcp-client add interface=ether1-internet disabled=no
+
+/interface vlan
+add interface=ether2-Trunk name=vlan100-pc vlan-id=100
+add interface=ether2-Trunk name=vlan200-hotspot vlan-id=200
+add interface=ether2-Trunk name=vlan99-remote vlan-id=99
+
+/ip address
+add address=192.168.100.1/24 interface=vlan100-pc comment="IP_VLAN_PC"
+add address=192.168.200.1/24 interface=vlan200-hotspot comment="IP_VLAN_HOTSPOT"
+add address=192.168.99.1/29 interface=vlan99-remote comment="IP_VLAN_REMOTE"
+add address=192.168.50.1/30 interface=ether3-Devisi-B comment="IP_ETHER3"
+
+/ip hotspot user profile
+add name=ID1-TAMU rate-limit=5M/5M
+add name=ID2-KARYAWAN rate-limit=10M/10M
+
+/ip hotspot user
+add name=TAMU password=123 profile=ID1-TAMU
+add name=KARYAWAN password=123 profile=ID2-KARYAWAN
+
+/queue simple
+add name="Limit-VLAN100" target=192.168.100.0/24 max-limit=5M/5M
+
+/ip route add dst-address=192.168.150.0/24 gateway=192.168.50.2

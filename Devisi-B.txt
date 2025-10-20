@@ -1,0 +1,38 @@
+#------------------------------------------------------------------
+# A. SYSTEM DAN INTERFACE NAMING
+#------------------------------------------------------------------
+/system identity
+set name=DEVISI-B-MOCHAMAD DINO ADJI SAPUTRA
+
+/interface ethernet
+set [ find default-name=ether1 ] name=ether1-DEVISI-A
+set [ find default-name=ether2 ] name=ether2-LAPTOP/PC
+
+#------------------------------------------------------------------
+# B. IP ADDRESSES
+#------------------------------------------------------------------
+/ip address
+add address=192.168.50.2/30 interface=ether1-DEVISI-A comment="Link ke Router Departemen A"
+add address=192.168.150.1/24 interface=ether2-LAPTOP/PC comment="Gateway LAN Departemen B"
+
+#------------------------------------------------------------------
+# C. STATIC ROUTING (Menghubungkan ke Departemen A)
+# Next-hop untuk semua jaringan Departemen A adalah 192.168.50.1 (IP Router A)
+#------------------------------------------------------------------
+/ip route
+add dst-address=0.0.0.0/0 gateway=192.168.50.1 comment="Default Gateway ke Router A"
+add dst-address=192.168.100.0/24 gateway=192.168.50.1 comment="Route ke VLAN 100 PC A"
+add dst-address=192.168.200.0/24 gateway=192.168.50.1 comment="Route ke VLAN 200 Hotspot A"
+add dst-address=192.168.99.0/29 gateway=192.168.50.1 comment="Route ke VLAN 99 Remote SW A"
+
+#------------------------------------------------------------------
+ip firewall nat add chain=srcnat out-interface=ether1-DEPARTEMAN-A action=masquerade
+/ip dns set servers=8.8.8.8 allow-remote-requests=yes
+/queue simple
+# Parent Queue untuk mengatur total bandwidth jika diperlukan
+add name=Jalur-PC target=ether2-LAPTOP/PC max-limit=5M/5M comment="Global Bandwidth Limit
+
+#------------------------------------------------------------------
+/user
+add name=admin1 password=123 group=full comment="User Full Access"
+add name=teknis password=123 group=read comment="User Read Access"
