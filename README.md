@@ -1,16 +1,13 @@
-UKK TJKT TAHUN AJARAN 2025
-███╗   ███╗██╗██╗  ██╗██████╗  ████████╗ ██████╗ ██╗██╗  ██╗
-████╗ ████║██║██║ ██╔╝██╔══██╗ ╚══██╔══╝██╔═══██╗██║╚██╗██╔╝
-██╔████╔██║██║█████╔╝ ██████╔╝    ██║   ██║   ██║██║ ╚███╔╝
-██║╚██╔╝██║██║██╔═██╗ ██╔═══╝     ██║   ██║   ██║██║ ██╔██╗
-██║ ╚═╝ ██║██║██║  ██╗██║         ██║   ╚██████╔╝██║██╔╝ ██╗
-╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝         ╚═╝    ╚═════╝ ╚═╝╚═╝  ╚═╝
-             M I K R O T I K   C O N F I G   S C R I P T
+        M I K R O T I K   C O N F I G   S C R I P T
+
+UKK TJKT TAHUN 2025
 
 🚀 Tentang Repo Ini
+
 Repo ini gue bikin buat anak SMK jurusan TKJ/TJKT yang males ngetik satu-satu di ujian UKK. 
 
 Tinggal copy ➜ paste ➜ enter ➜ kelar.
+
 Kalau masih error, ya berarti lu yang salah, bukan skripnya. 
 
 Repo ini berisi 2 konfigurasi router Mikrotik sesuai skenario UKK TJKT 2025.
@@ -18,6 +15,7 @@ Repo ini berisi 2 konfigurasi router Mikrotik sesuai skenario UKK TJKT 2025.
 
 
 📌 Isi Repository
+
 TERDAPAT 2 SKRIP UNTUK ROUTER A DAN B
    ├── RO-DEVISI-A 
    └── RO-DEVISI-B 
@@ -28,6 +26,7 @@ Masing-masing file berisi script yang siap ditembak ke Mikrotik via: Winbox
 
 
 📌 Cara Pakai (biar ga salah langkah)
+
 1. Login ke router > winbox
 2. Masuk ke menu System → Scripts
 3. Klik tombol + (Add New Script)`
@@ -48,18 +47,22 @@ Masing-masing file berisi script yang siap ditembak ke Mikrotik via: Winbox
 
 
 ✅ Kenapa Repo Ini Dibuat?
+
 Banyak yang masih konfigurasi manual
 Banyak yang salah konfigurasik & bingung saat ada masalah
 Banyak yang kebanyakan panik, kurang teliti saat mengerjakan
 ==============================================================
 
-Dengan script ini lu bisa: ✔ Hemat waktu
+Dengan script ini lu bisa: 
+
+✔ Hemat waktu
 ✔ Fokus nerapin, bukan ngetik
 ✔ Confidence level naik +99
 ==============================================================
 
 
 🏷️ Tag
+
 mikrotik, routeros, SMK, TKJ, TJKT, UKK 2025, script-ukk, networking
 ==============================================================
 
