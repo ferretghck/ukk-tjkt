@@ -1,3 +1,5 @@
+KALO BERHASIL JANGAN LUPA TRAKTIR🤣
+
         M I K R O T I K   C O N F I G   S C R I P T
 
 UKK TJKT TAHUN 2025
@@ -22,7 +24,6 @@ TERDAPAT 2 SKRIP UNTUK ROUTER A DAN B
    |____ BAHAN UKK LAINYA
    
 Masing-masing file berisi script yang siap ditembak ke Mikrotik via: Winbox
-==============================================================
 
 
 📌 Cara Pakai (biar ga salah langkah)
@@ -39,10 +40,13 @@ Masing-masing file berisi script yang siap ditembak ke Mikrotik via: Winbox
 7. Untuk menjalankan script-nya:
    Pilih script yang tadi lo buat
    Klik Run Script
+
+⚠️UNTUK DHCP SERVER DAN HOSPOT SETUP HARUS DI SETUP SECARA      MANUAL KARENA KETERBATASAN SKRIP
+
 ==============================================================
 
 
-> Note: Penguji biasanya cuma mau liat hasil jalan. Jadi, santai aja, yang penting DHCP, IP, firewall, dan routing nyala tanpa drama.
+> Note: Saya tidak bertanggung jawab jika kalian dimarahi oleh asesor/penguji😂
 ==============================================================
 
 
@@ -51,6 +55,7 @@ Masing-masing file berisi script yang siap ditembak ke Mikrotik via: Winbox
 Banyak yang masih konfigurasi manual
 Banyak yang salah konfigurasik & bingung saat ada masalah
 Banyak yang kebanyakan panik, kurang teliti saat mengerjakan
+
 ==============================================================
 
 Dengan script ini lu bisa: 
@@ -58,18 +63,21 @@ Dengan script ini lu bisa:
 ✔ Hemat waktu
 ✔ Fokus nerapin, bukan ngetik
 ✔ Confidence level naik +99
+
 ==============================================================
 
 
 🏷️ Tag
 
 mikrotik, routeros, SMK, TKJ, TJKT, UKK 2025, script-ukk, networking
+
 ==============================================================
 
 
 💬 Short Description
 
-Script konfigurasi Mikrotik untuk UKK TJKT 2025. Tinggal copy-paste, no drama, no typo, konfigurasi cepat 
+Script konfigurasi Mikrotik untuk UKK TJKT 2025. Tinggal copy-paste, no drama, no typo, konfigurasi cepat. 
+
 ==============================================================
 
 
